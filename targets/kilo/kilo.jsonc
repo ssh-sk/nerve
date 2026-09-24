@@ -1,0 +1,61 @@
+{
+  "$schema": "https://app.kilo.ai/config.json",
+  "enabled_providers": [
+    "openai",
+    "openrouter",
+    "xai"
+  ],
+  "default_agent": "generic-coder",
+  "agent": {
+    "code": {
+      "disable": true
+    },
+    "plan": {
+      "disable": true
+    },
+    "ask": {
+      "disable": true
+    },
+    "debug": {
+      "disable": true
+    },
+    "orchestrator": {
+      "disable": true
+    },
+    "explore": {
+      "disable": true
+    },
+    "general": {
+      "disable": true
+    }
+  },
+  "indexing": {
+    "provider": "openai",
+    "enabled": true
+  },
+  "skills": {
+    "paths": [
+      "__NERVE_ROOT__/skills"
+    ]
+  },
+  "permission": {
+    "external_directory": {
+      "__NERVE_ROOT__/shared/*": "allow",
+      "__NERVE_ROOT__/skills/_shared/*": "allow"
+    },
+    "markdown_source": {
+      "__NERVE_ROOT__/targets/kilo/agents/*": "allow"
+    }
+  },
+  "small_model": "openrouter/z-ai/glm-5.3-flash",
+  "subagent_model": "xai/grok-4.7",
+  "subagent_variant_overrides": {
+    "xai/grok-4.7": "high"
+  },
+  "auto_collapse_reasoning": true,
+  "terminal_command_display": "collapsed",
+  "web_search": true,
+  "compaction": {
+    "threshold_percent": 75
+  }
+}

@@ -1,0 +1,5 @@
+# Local working artifacts and machine-local files, not for the public repo
+.archive/
+drafts/
+local/*
+!local/env.example.sh
