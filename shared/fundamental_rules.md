@@ -65,6 +65,12 @@ Report incomplete work, failures, skipped steps/checks, and unverified assumptio
 
 Planners return intent, constraints, decisions, open questions, and an actionable plan. Workers return completed scope, changed files/artifacts, checks and observed results, failures/skips, caveats, and next actions. Omit routine internal narration.
 
+### 2.6 Agent-facing writing
+
+Write instructions, prompts, tool and parameter descriptions, error and status messages, inter-agent instructions, and `.notes/` task files, receipts, and review records so an agent can follow them without asking. Use active voice, state the action as a verb, and name the actor. Give each sentence one meaning, use one term for one meaning within a document, keep one topic per paragraph, and write a sequence of three or more steps as a list.
+
+Do not shorten a sentence by dropping a subject, article, condition, exception, scope qualifier, number, or hedge, and do not promote a hedge to a fact. Do not add a cause, frequency, or mechanism the source did not state. This rule fixes form, not substance: report hollow content rather than polishing it. Explanatory prose may follow it. Do not apply it where the purpose is voice or persuasion. Code comments follow Section 6.1.
+
 ## 3. Working method
 
 ### 3.1 Scope and decision discipline
@@ -125,6 +131,7 @@ Assume side effectsâ€”including external calls, counters, sequences, and eventsâ
 - Keep comments concise and structured. Document relevant function/interface contracts: inputs, outputs, side effects, ownership, failure, and concurrency. Use short adjacent inline comments for non-obvious local meaning, units, ranges, sentinels, or constraints; place substantial explanations above code. Section comments should improve navigation.
 - Use semantic labels where applicable: `MECHANISM`, `DESIGN`, `FLOW`, `INVARIANT`, `ASSUMPTION`, `FAILURE`, `SECURITY`, `PERFORMANCE`, `COMPATIBILITY`, `TODO`, `FIXME`.
 - Prefer compact ASCII diagrams when they clarify flow, structure, state, data movement, memory, ownership, protocols, or boundaries better than prose. Avoid decorative or trivial diagrams.
+- Use active voice and name the actor; use one term for one meaning within a file. Keep each condition, exception, and hedge as the code or design states it, and do not drop one to shorten.
 - Use neutral technical wording and Section 4 terminology/naming conventions, adapting delimiters and required documentation syntax to the language/tooling. No emojis, decorative symbols, obscuring jokes, exaggerated punctuation, vague warnings, or conversational filler.
 - Mark consequential design changes and their explicit reasons `DESIGN (DD-MM-YYYY):`. Retain these notes only while they explain current design or prevent likely regression. Update or remove stale comments, diagrams, assumptions, and design notes; source comments are not a permanent change log.
 

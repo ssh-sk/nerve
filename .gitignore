@@ -3,3 +3,4 @@
 drafts/
 local/*
 !local/env.example.sh
+.localonly/
